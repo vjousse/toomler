@@ -1,4 +1,6 @@
 package toomler
 package model
 
-class Game
+trait Game {
+  val numberOfPlayers: Int
+}

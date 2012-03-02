@@ -1,8 +1,8 @@
 package toomler
 package model
 
-case class TournamentInProgress(p: List[Player], round: Int = 1) extends {
-  val players = p
-} with BaseTournament {
+import scala.util.Random
 
+case class TournamentInProgress(teams: List[Team], game: Game, round: Int = 1) extends BaseTournament {
+  val matches: List[Match] = teams.grouped(game.numberOfPlayers) map { group => Match(group) } toList
 }
