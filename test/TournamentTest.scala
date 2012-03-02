@@ -7,12 +7,13 @@ import toomler.model._
 
 class TournamentTest extends Specification {
 
-  "A basic tournament" should {
+  "A small tournament" should {
+    val smallTournament = Tournament(List(Player("Vince"), Player("Thib")))
     "have 2 players" in {
-      Tournament(List(
-        Player("Vince"),
-        Player("Thib")
-      )).players must have size(2)
+      smallTournament.players must have size(2)
+    }
+    "start with round 1" in {
+      smallTournament.start.round must equalTo(1)
     }
   }
 }

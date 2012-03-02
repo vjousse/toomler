@@ -1,6 +1,4 @@
 package toomler
 package model
 
-trait Game {
-
-}
+class Game
