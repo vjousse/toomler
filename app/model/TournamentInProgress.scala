@@ -3,7 +3,7 @@ package model
 
 import scala.util.Random
 
-class TournamentInProgress private (matchs: List[Match], aGame: Game, aRound: Int = 1) extends BaseTournament {
+class TournamentInProgress private (matchs: List[Match], aGame: Game, aRound: Int = 1) {
   val game = aGame
   val round = aRound
 }
