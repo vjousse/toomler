@@ -1,4 +1,4 @@
 package toomler
 package model
 
-case class Match(teams: List[Team])
+case class Match(firstTeam: Team, secondTeam: Team)
